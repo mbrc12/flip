@@ -6,19 +6,22 @@
 	<meta name="description" content="A game of black and white.">
 	<meta name="keywords" content="game, black, white, circles, flip">
 	<meta name="author" content="Mriganka Basu Roy Chowdhury">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
 	
 	<script src = 'jquery-3.2.1.min.js'></script>
 	<script src = 'flip.js'></script>
 
 	<link rel = "stylesheet" type = "text/css" href = "style.css">
 </head>
-<body class = "center" onload = "go()">	
-	
-	<div id = "container"> 
+<body class = "center" onload = "process()">	
+		
+	<div id = "container">
+	<div id = "toprow"><span id = "header"><span id = 'F'>F</span><span id = 'lip'>lip</span></div>
+
 	<table id = "controls">
-		<tr><td class = "big-cell" id = "grid-size"></td><td class = "current-score">0</td><td class = "best-score"> 0 </td></tr>
+		<tr><td class = "big-cell" id = "grid-size"></td></tr>
 	</table>
+
 	<div id = "gamezone">
 	<div id = "congrats" onclick = 'new_game()'> 
 		<div id = "congo-text"> </div>

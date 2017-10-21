@@ -1,7 +1,9 @@
 const MIN_SZ = 3;
-const MAX_SZ = 10;
+const MAX_SZ = 9;
 const PERC_OF_SQR = 75.0;
 var COLOR = ["#FFFFFF", "#000000"];
+var CELL = 90.0;
+var LFT = 99.0 - CELL;
 var curSz = 5;
 var curArray;
 
@@ -50,15 +52,17 @@ function generate(n) {
 }
 
 function go() {
-	var elem = document.getElementById("grid-size");
+	var elem = document.getElementById("grid-size"); elem.innerHTML = "";
 	for (var i = MIN_SZ; i <= MAX_SZ; i++) {
 		if (i == curSz) {
-			elem.innerHTML += "<a href = '#' class = 'small-button current' onclick = 'new_game("+i+")'>"+i+"</a>";
+			elem.innerHTML += "<a href = '#' class = 'small-button current' onclick = 'new_game("+i+")'><span id = 'link'>"+i+"</span></a>";
 		} else {
-			elem.innerHTML += "<a href = '#' class = 'small-button' onclick = 'new_game("+i+")'>"+i+"</a>";
+			elem.innerHTML += "<a href = '#' class = 'small-button' onclick = 'new_game("+i+")'><span id = 'link'>"+i+"</span></a>";
 		}
 	}	
+}
 
+function process() {
 	new_game(curSz);
 }
 
@@ -71,7 +75,7 @@ function show(x, y) {
 }
 
 function new_game(n) {
-	curSz = n; var elem = document.getElementById("gamespace");	
+	curSz = n; go(); curScore = 0; var elem = document.getElementById("gamespace");	
 
 	gamearray = generate(n);
 
@@ -94,10 +98,11 @@ function new_game(n) {
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
 			var elem = document.getElementById("td"+getid(i,j));
-			var perc = (60.0)/n;
+			var perc = (CELL)/n;
 			elem.style.height = "" + perc + "%";
 			elem.style.width  = "" + perc + "%";
-			elem.style.margin = "" + (40.0/n) + "%";
+			elem.style["padding-top"] = "" + (LFT/n) + "%";
+			elem.style["padding-left"] = "" + (LFT/n) + "%";
 		}
 	}
 		
@@ -105,16 +110,15 @@ function new_game(n) {
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
 			
-			console.log(getid(i,j));
 			var t = gamearray[i][j], cl = "color"+t;
 			var elem = document.getElementById(getid(i,j));
-			console.log(elem);
 			elem.classList.add(cl);
 
 			//show(i,j);
 		}
 	}
 }
+
 
 function domove(x, y) {
 	
@@ -152,6 +156,19 @@ function domove(x, y) {
 		//show(x,i); show(i,y);
 		
 	}
+
+	checkdone();
 		
 }
+
+function checkdone() {
+	var n = gamearray.length;
+	for (var i = 0; i < n; i++) {
+		for (var j = 0; j < n; j++) {
+			if (gamearray[i][j] == 1) return;
+		}
+	}
+
+}	
+
 
