@@ -43,8 +43,8 @@ function generate(n) {
 
 	for (var i = 0; i < moves; i++) {
 		var px = randint(n), py = randint(n);
-		move(array, px, py);
-		move(array, py, px);
+		move(array, px, py); move(array, py,px);
+		move(array, py,py);
 	}
 
 	return array;
@@ -72,7 +72,7 @@ function show(x, y) {
 }
 
 function new_game(n) {
-	curSz = n; var elem = document.getElementById("gamespace");
+	curSz = n; var elem = document.getElementById("gamespace");	
 
 	gamearray = generate(n);
 
@@ -80,17 +80,28 @@ function new_game(n) {
 
 	curArray = gamearray;			
 
-	var str = "<table>";
+	var str = "<table id = 'gametable'>";
 
 	for (var i = 0; i < n; i++) {
 		str += "<tr>";
 		for (var j = 0; j < n; j++) {
-			str += "<td><div id = '"+getid(i,j)+"' class = 'flipper' onclick = 'domove("+i+","+j+")'></div></td>";
+			str += "<td id = 'td"+getid(i,j)+"'><div id = '"+getid(i,j)+"' class = 'flipper' onclick = 'domove("+i+","+j+")'></div></td>";
 		}
 		str += "</tr>";
 	}
 
 	str += "</table>"; elem.innerHTML = str;
+
+	for (var i = 0; i < n; i++) {
+		for (var j = 0; j < n; j++) {
+			var elem = document.getElementById("td"+getid(i,j));
+			var perc = (60.0)/n;
+			elem.style.height = "" + perc + "%";
+			elem.style.width  = "" + perc + "%";
+			elem.style.margin = "" + (40.0/n) + "%";
+		}
+	}
+		
 
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
