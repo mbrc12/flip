@@ -1,0 +1,30 @@
+.flipper {
+	margin: 15px;
+	height: 70px;
+	width:  70px;
+	border-radius: 5% 50%;
+	transition : all 1s;
+}
+
+.color0 {
+	-webkit-transition : 1s;
+	-moz-transition : 1s;
+	-ms-transition : 1s;
+	-o-transition : 1s;
+	transition : 1s;
+	background-color : #34dd44;
+	transform: rotate(-270deg);
+}
+
+.color1 {
+	-webkit-transition : 1s;
+	-moz-transition : 1s;
+	-ms-transition : 1s;
+	-o-transition : 1s;
+	transition : 1s;
+	background-color : #ff7055;
+	transform: rotate(270deg);
+}
+
+
+

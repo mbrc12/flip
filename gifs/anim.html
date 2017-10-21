@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+
+var elem;
+var r = 0;
+var sz = 100.0;
+var eac = 15.0;
+var steps = 500.0/eac;
+var incr = sz/steps;
+var endc = "#FFFFFF";
+var startc   = "#000000";
+
+function work() {
+	elem = document.getElementById("svg");
+
+	elem.innerHTML += "<circle cx = "+sz+" cy = "+sz+" r = "+sz+" fill = "+startc+">";
+	setTimeout(build, eac);
+}
+
+function build() {
+	elem.innerHTML += "<circle cx = "+sz+" cy = "+sz+" r = "+r+" fill = "+endc+">";
+	r += incr;
+	if (r <= sz) setTimeout(build, eac);
+	else elem.innerHTML += "<circle cx = "+sz+" cy = "+sz+" r = "+sz+" fill = "+endc+">"
+}
+
+
+</script>
+</head>
+<body onload = 'work()' bgcolor="#9575CD">
+<svg id = 'svg' width = "420" height = "420" version = "1.1" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink" xml:space = "preserve"></svg>
+</body>
+</html>
