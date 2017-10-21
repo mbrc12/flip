@@ -43,8 +43,7 @@ function generate(n) {
 
 	for (var i = 0; i < moves; i++) {
 		var px = randint(n), py = randint(n);
-		move(array, px, py); move(array, py,px);
-		move(array, py,py);
+		move(array, px, py); 
 	}
 
 	return array;
