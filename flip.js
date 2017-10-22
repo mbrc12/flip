@@ -185,7 +185,9 @@ function checkdone() {
 			if (gamearray[i][j] == 1) return;
 		}
 	}
-	
+		
+	curSz++;
+		
 	document.getElementById("congrats").style.display = "block";
 }	
 
