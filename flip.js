@@ -4,7 +4,7 @@ const PERC_OF_SQR = 75.0;
 var COLOR = ["#FFFFFF", "#000000"];
 var CELL = 90.0;
 var LFT = 99.0 - CELL;
-var curSz = 5;
+var curSz = 3;
 var curArray;
 
 var gamearray;
