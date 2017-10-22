@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-	background-color: #151522;
+	background-color: #003333;
 	font-family: 'Open Sans', sans-serif;
 	overflow : hidden;
 	position : relative;
@@ -18,7 +18,7 @@ body {
 
 a, a:link, a:hover, a:active, a:focus {
 	text-decoration : none;
-	color : #4400ff;
+	color : #3e2656;
 }
 
 .flipper {
