@@ -41,6 +41,23 @@ function move(array, x, y) {
 
 function generate(n) {
 	var array = create2d(n);
+
+	/*array[0][0] = 1;
+	array[1][0] = 1;
+	array[2][0] = 1;
+	array[3][0] = 1;
+	array[4][0] = 1;
+	array[1][2] = 1;
+	array[1][3] = 1;
+	array[1][4] = 1;
+	array[2][4] = 1;
+	array[3][2] = 1;
+	array[3][3] = 1;
+	array[3][4] = 1;
+	array[4][2] = 1;
+	array[4][3] = 1;
+	array[4][4] = 1;*/
+
 	var moves = movefunction(n);
 
 	for (var i = 0; i < moves; i++) {
