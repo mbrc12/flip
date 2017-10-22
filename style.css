@@ -154,7 +154,7 @@ a, a:link, a:hover, a:active, a:focus {
 	right : 0;
 	bottom : 0;
 	display : none;
-	background-color : rgba(0,0,0,0.95);
+	background-color : rgba(0,0,0,0.85);
 	z-index: 9999;
 	cursor: pointer;
 }
