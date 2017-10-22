@@ -52,7 +52,7 @@ function generate(n) {
 }
 
 function go() {
-	var elem = document.getElementById("grid-size"); elem.innerHTML = "";
+	var elem = document.getElementById("controls"); elem.innerHTML = "";
 	for (var i = MIN_SZ; i <= MAX_SZ; i++) {
 		if (i == curSz) {
 			elem.innerHTML += "<a href = '#' class = 'small-button current' onclick = 'new_game("+i+")'><span id = 'link'>"+i+"</span></a>";
@@ -168,7 +168,29 @@ function checkdone() {
 			if (gamearray[i][j] == 1) return;
 		}
 	}
-
+	
+	document.getElementById("congrats").style.display = "block";
 }	
 
+function off() {
+	document.getElementById("congrats").style.display = "none";
+	process();
+}
 
+function off2() {
+	document.getElementById("instructions").style.display = "none";
+	process();
+}
+
+function off3() {
+	document.getElementById("about").style.display = "none";
+}
+
+
+function intro() {
+	document.getElementById("instructions").style.display = "block";
+}
+
+function about() {
+	document.getElementById("about").style.display = "block";
+}

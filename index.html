@@ -7,32 +7,61 @@
 	<meta name="keywords" content="game, black, white, circles, flip">
 	<meta name="author" content="Mriganka Basu Roy Chowdhury">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
-	
-	<script src = 'jquery-3.2.1.min.js'></script>
+
 	<script src = 'flip.js'></script>
 
 	<link rel = "stylesheet" type = "text/css" href = "style.css">
 </head>
-<body class = "center" onload = "process()">	
-		
-	<div id = "container">
-	<div id = "toprow"><span id = "header"><span id = 'F'>F</span><span id = 'lip'>lip</span></div>
+<body class = "unselectable" onload = "intro(); process()">	
+	
 
-	<table id = "controls">
-		<tr><td class = "big-cell" id = "grid-size"></td></tr>
-	</table>
+	<div class = "overlay" id = "instructions" onclick = "off2()">
+		<div class = "container">
+			<div class = "txt shift">
+			<span class = "medium">
+				<span class = "purple">Click on cells to </span><span class = "red">F</span><span class = "green">lip</span><span class = "purple"> their rows and columns.</span><br>
+				<span class = "purple">Make the whole grid </span><span class = "green">green.</span>
+			</span>
+			</div>
+		</div>
+	</div>
+
+	<div class = "overlay" id = "congrats" onclick = "off()">
+		<div class = "container">
+			<div class = "txt">
+				<span class = "large"><span class = "red">C</span><span class = "green">ongratu<span class = "red">la</span>tions</span></span><br>
+				<span class = "small"><span class = "purple">Click anywhere to start a new game. </span></span>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "overlay" id = "about" onclick = "off3()">
+		<div class = "container">
+			<div class = "txt shift">
+				<span class = "medium purple">
+					<span class = "large red">F</span><span class = "large green">lip</span> created by <br>
+					<span class = "green">Mriganka<span> <span class = "red"> Basu </span> <span class = "green"> Roy</span> <span class = "red"> Chowdhury </span></span>
+				</span><br><br>
+				<span class = "smaller purple">
+					<span class = "medium red">F</span><span class = "medium green">lip</span> is a cell flipping game conceptually derived from the classic <span class = "medium">Lights Out.</span>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class = "container" id = "gamearea">
+	<div class = "toprow"><span id = "header" onclick = "about()"><span class = 'red'>F</span><span class = 'green'>lip</span></span></div>
+
+	<div class = "toprow"><div id = "controls" ></div></div>
 
 	<div id = "gamezone">
-	<div id = "congrats" onclick = 'new_game()'> 
-		<div id = "congo-text"> </div>
-	</div>
 
 	<div id = 'gamespace'>
 			
 	</div>
 	</div>
 	</div>
-
+	
 </body>
 </html>
 				
