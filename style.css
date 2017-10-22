@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
 	background-color: #003333;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	overflow : hidden;
 	position : relative;
 }
@@ -90,7 +90,7 @@ a, a:link, a:hover, a:active, a:focus {
 }
 
 #header {
-	font-size : 8vmin;
+	font-size : 10vmin;
 	font-weight : bold;
 }
 
