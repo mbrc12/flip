@@ -118,11 +118,11 @@ a, a:link, a:hover, a:active, a:focus {
 }
 
 .flipper.color0:hover {
-	box-shadow : 0 0 3px 3px #cdcdcd;
+	box-shadow : 0 0 5px 5px #cdcdcd;
 }
 
 .flipper.color1:hover {
-	box-shadow : 0 0 3px 3px #cdcdcd;
+	box-shadow : 0 0 5px 5px #cdcdcd;
 }
 
 .container {

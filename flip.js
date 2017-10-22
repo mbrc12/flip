@@ -187,8 +187,10 @@ function checkdone() {
 	}
 		
 	curSz++;
-		
-	document.getElementById("congrats").style.display = "block";
+	
+	setTimeout(() => {
+		document.getElementById("congrats").style.display = "block";
+	}, 1200);
 }	
 
 function off() {
