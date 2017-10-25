@@ -18,6 +18,11 @@ body {
 	user-select: none;
 }
 
+.btlogo {
+	height : 6vmin;
+}
+	
+
 .btadd{
 	 -moz-user-select: text;
 	 -khtml-user-select: text;
