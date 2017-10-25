@@ -108,6 +108,7 @@ a, a:link, a:hover, a:active, a:focus {
 #header {
 	font-size : 10vmin;
 	font-weight : bold;
+	cursor : pointer;
 }
 
 .info {
@@ -172,7 +173,6 @@ a, a:link, a:hover, a:active, a:focus {
 	display : none;
 	background-color : rgba(0,0,0,0.85);
 	z-index: 9999;
-	cursor: pointer;
 }
 
 
