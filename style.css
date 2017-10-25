@@ -18,6 +18,14 @@ body {
 	user-select: none;
 }
 
+.btadd{
+	 -moz-user-select: text;
+	 -khtml-user-select: text;
+	 -webkit-user-select: text;
+	 -ms-user-select: text;
+	 user-select: text;
+}
+
 a, a:link, a:hover, a:active, a:focus {
 	text-decoration : none;
 	color : #3e2656;
@@ -189,5 +197,11 @@ a, a:link, a:hover, a:active, a:focus {
 	position : relative;
 	top : 30vmin;
 	margin : auto;
+}
+
+.txt2 {
+	position:relative;
+	top:20vmin;
+	margin:auto;
 }
 
